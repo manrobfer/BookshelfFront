@@ -1,0 +1,43 @@
+:root{
+    --offcanvas-width: 420px;
+    --topNavbarHeight: 56px;
+    --offcanvas-horizontal-width: 420px;
+}
+
+.side-offcanvas{
+    width: var(--offcanvas-horizontal-width);   
+}
+
+@media (min-width: 1200px){
+     body{
+        overflow: auto !important;
+     }
+
+    .offcanvas-backdrop::before{
+        display: none;
+    }
+    .side-offcanvas {
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(100% - var(--topNavbarHeight));
+        width: var(--offcanvas-width);
+    }
+}
+
+.sidebar-link{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-link .right-icon {
+    display: inline-flex;
+}
+
+.sidebar-link[aria-expanded="true"]  .right-icon {
+    transform: rotate(180deg);
+}
+
+.container{
+     margin-left: var(--offcanvas-horizontal-width);
+}

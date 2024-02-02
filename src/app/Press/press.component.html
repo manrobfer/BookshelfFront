@@ -1,0 +1,84 @@
+<div class="container">
+    <h5> {{ pagetitle }}</h5>    
+          
+               <form [formGroup]="pressForm" (ngSubmit)="onSubmit()">
+                <div id="pressData"> 
+                    <div class="row">
+                        <div class="col-xs-8 col-md-5 col-sm-offset-1">
+                           <div class="form-group"> 
+                               <label for="name">Empresa</label>
+                               <input type="text" 
+                                      id="name"
+                                      formControlName="name"
+                                      class="form-control">
+                                        <span *ngIf="!pressForm.get('nome')?.valid && pressForm.get('nome')?.touched">Entre com um nome válido</span>                           
+                           </div>
+                       </div>       
+                       <div class="col-xs-6 col-md-7 col-sm-offset-1">   
+                           <div class="form-group">                    
+                                   <label for="nomeFantasia">Nome Fantasia</label>
+                                   <input type="text"
+                                            id="nomeFantasia" 
+                                            formControlName="nickname"
+                                            class="form-control">
+                           </div>                 
+                       </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xs-4 col-md-3 col-sm-offset-1">
+                        <div class="form-group">
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" 
+                                   id="cnpj" 
+                                   formControlName="cnpj"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-md-3 col-sm-offset-1">
+                        <div class="form-group">
+                            <label for="ie">IE</label>
+                            <input type="text" 
+                                   id="ie" 
+                                   formControlName="ie"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-md-6 col-sm-offset-1">
+                        <div class="form-group">
+                            <label for="website">WEBSITE</label>
+                            <input type="text" 
+                                   id="website" 
+                                   formControlName="website"
+                                   class="form-control">
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="col-xs-3 col-md-4 col-sm-offset-1">
+                            <div class="form-group">
+                               <label for="foundation">Fundado</label>
+                               <input type="text" 
+                                      id="foundation" 
+                                      formControlName="foundation"
+                                      class="form-control">
+                            </div>
+                      </div>
+                        <div class="col-xs-4 col-md-5 col-sm-offset-1">
+                                <div class="form-group">
+                                   <label for="email">e-Mail</label>
+                                   <input type="text" 
+                                          id="email" 
+                                          formControlName="email"
+                                          class="form-control">
+                                </div>
+                          </div>
+                  </div>           
+                </div>                
+                <button class="btn btn-primary"  type="submit">Salvar</button> 
+              </div>
+              
+              </form>             
+   <hr />      
+   <PressDetails-component></PressDetails-component>
+</div>  
+   
+   

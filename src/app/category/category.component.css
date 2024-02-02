@@ -1,0 +1,16 @@
+.container {
+    margin-top: 30px;
+  } 
+  
+h5{
+  text-align: center;
+  background-color: azure;
+}
+  div {
+      padding-top: 5px;
+      padding-bottom: 2px;      
+  }
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red
+  }
